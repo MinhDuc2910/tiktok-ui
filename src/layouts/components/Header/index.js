@@ -53,13 +53,26 @@ function Header() {
                     </Link>
                     <div className={cx('tab-large')}>
                         <div className={cx('list-tab')}>
-                            {tabHeader.map((tab) => (
-                                <Link key={tab.title} to={tab.link}>
-                                    <div ref={tabs} className={cx('tab')}>
-                                        {tab.title}
-                                    </div>
-                                </Link>
-                            ))}
+                            <Link to={config.routes.home}>
+                                <div ref={tabs} className={cx('tab')}>
+                                    Trang chủ
+                                </div>
+                            </Link>
+                            <Link to={config.routes.following}>
+                                <div ref={tabs} className={cx('tab')}>
+                                    Giới thiệu
+                                </div>
+                            </Link>
+                            <Link to={config.routes.profile}>
+                                <div ref={tabs} className={cx('tab')}>
+                                    Tuyển dụng
+                                </div>
+                            </Link>
+                            <Link to={config.routes.live}>
+                                <div ref={tabs} className={cx('tab')}>
+                                    Hoạt động
+                                </div>
+                            </Link>
 
                             <div ref={line} className={cx('line-tab')}></div>
                         </div>

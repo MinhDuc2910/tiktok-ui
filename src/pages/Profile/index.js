@@ -4,7 +4,7 @@ import TitleContainer from '~/layouts/TitleConcainer/TitleContainer';
 import Position from './Positions/Position';
 import Button from '~/components/Button';
 import ModalContent from './ModalContent/ModalContent.js';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 const menu = [
     {

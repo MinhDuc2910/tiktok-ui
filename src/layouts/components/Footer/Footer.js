@@ -8,9 +8,26 @@ import styles from './Footer.module.scss';
 const cx = classNames.bind(styles);
 
 function Footer() {
-    const [valueName, setValueName] = useState();
+    const [valueName, setValueName] = useState('');
+    const [valueEmail, setValueEmail] = useState('');
+    const [valueMessage, setValueMevalueMessage] = useState('');
 
-    function handleSubmit() {}
+    function handleSubmit() {
+        if (valueName === '') {
+            alert('Vui lòng nhập tên');
+        } else if (valueEmail === '') {
+            alert('Vui lòng nhập email');
+        } else if (valueMessage === '') {
+            alert('Vui lòng nhập message');
+        } else {
+            setValueName('');
+            setValueEmail('');
+            setValueMevalueMessage('');
+
+            alert(' Chúng tôi đã nhận được thông tin của bạn và sẽ phản hồi bạn sớm nhất,Cảm ơn bạn đã gửi thông tin ');
+        }
+    }
+
     return (
         <div className={cx('footer')}>
             <div className={cx('footer-container')}>
@@ -47,13 +64,25 @@ function Footer() {
                                 setValueName(e.target.value);
                             }}
                         />
-                        <input type="email" className={cx('form-control')} placeholder="Nhập email của bạn" />
+                        <input
+                            type="email"
+                            className={cx('form-control')}
+                            placeholder="Nhập email của bạn"
+                            value={valueEmail}
+                            onChange={(e) => {
+                                setValueEmail(e.target.value);
+                            }}
+                        />
                         <textarea
                             type="text"
                             className={cx('form-control-message')}
                             required
                             rows="5"
                             placeholder="Nhập tin nhắn của bạn"
+                            value={valueMessage}
+                            onChange={(e) => {
+                                setValueMevalueMessage(e.target.value);
+                            }}
                         ></textarea>
                         <div className={cx('button')} onClick={handleSubmit}>
                             <Button green large>
