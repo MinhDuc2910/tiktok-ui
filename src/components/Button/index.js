@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
-    primary = false,
-    outline = false,
+    white = false,
+    green = false,
     upload = false,
     rounded = false,
     disabled = false,
@@ -48,8 +48,8 @@ function Button({
 
     const classes = cx('wrapper', {
         [className]: className,
-        primary,
-        outline,
+        white,
+        green,
         upload,
         disabled,
         rounded,
@@ -70,8 +70,8 @@ function Button({
 Button.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,
-    primary: PropTypes.bool,
-    outline: PropTypes.bool,
+    white: PropTypes.bool,
+    green: PropTypes.bool,
     upload: PropTypes.bool,
     rounded: PropTypes.bool,
     disabled: PropTypes.bool,

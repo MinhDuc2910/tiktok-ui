@@ -1,0 +1,55 @@
+.service {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.service-container {
+    max-width: 1140px;
+    padding: 0 15px;
+}
+
+.service-box {
+    display: flex;
+}
+
+.item-style {
+    max-width: 33.33333%;
+    padding: 15px;
+}
+
+.icon-style {
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    line-height: 80px;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.box-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.font-icon {
+}
+
+.title-item-style {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-item-style {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: left;
+    line-height: 30px;
+    padding: 0 15px;
+    font-weight: 500;
+}
